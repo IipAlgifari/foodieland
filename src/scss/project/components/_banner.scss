@@ -1,0 +1,81 @@
+/* ===================================================
+Components: Banner
+====================================================== */
+.banner {
+  &__wrapper {
+    font-size: 0;
+    border-radius: 40px;
+    background-color: color(primary);
+    overflow: hidden;
+  }
+  &__txt {
+    @include inline-block;
+    width: 50%;
+    padding: 50px;
+  }
+  &__box {
+    margin-bottom: 98px;
+  }
+  .btn--bgwhite {
+    margin-bottom: 32px;
+  }
+  &__title {
+    @include font-size(64);
+    letter-spacing: -4%;
+    margin-bottom: 24px;
+  }
+  &__desc {
+    opacity: 0.6;
+    margin-bottom: 30px;
+  }
+  .btn--tertiary {
+    margin-right: 16px;
+  }
+  &__inner {
+    font-size: 0;
+  }
+  &__profile {
+    @include inline-block;
+    width: 50%;
+    text-align: left;
+    &__img {
+      @include inline-block;
+      margin-right: 16px;
+    }
+    &__txt {
+      @include inline-block;
+    }
+    &__title {
+      @include font-size(16);
+      margin-bottom: 8px;
+      letter-spacing: -2%;
+    }
+    &__date {
+      @include font-size(14);
+      opacity: 0.6;
+      margin-bottom: 0;
+    }
+  }
+  &__view {
+    @include inline-block;
+    width: 50%;
+    text-align: right;
+  }
+  &__badge {
+    position: absolute;
+    left: 50%;
+    top: 0;
+  }
+  &__img {
+    @include inline-block;
+    width: 50%;
+    height: 654px;
+    overflow: hidden;
+    &__el {
+      display: block;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

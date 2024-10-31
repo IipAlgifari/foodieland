@@ -1,0 +1,171 @@
+/* ===================================================
+Layout: Header
+====================================================== */
+
+.header {
+  $h: &;
+  width: 100%;
+  padding: 40px 0;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+  @include medium {
+    padding: 32px 0;
+  }
+  @include small {
+    padding: 24px 0;
+  }
+
+  &__wrapper {
+    @include clearfix;
+  }
+
+  &__logo {
+    text-decoration: none;
+    width: 25%;
+    float: left;
+    @include small {
+      padding-top: 16px;
+    }
+    &__el {
+      display: block;
+      width: 110px;
+    }
+  }
+
+  .burger-menu {
+    display: none;
+    float: right;
+    width: 50%;
+    @include small {
+      display: block;
+      height: 48px;
+      width: 48px;
+      background-color: transparent;
+      padding: 8px 0;
+      border: 0;
+      cursor: pointer;
+    }
+    &__bar {
+      width: 100%;
+      height: 3px;
+      background-color: color(black);
+      display: block;
+      margin-bottom: 9px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__menu {
+    width: 50%;
+    float: left;
+    text-align: center;
+    padding: 3px 0;
+    @include small {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 96px;
+      width: 100%;
+      height: 100%;
+      padding: 24px;
+    }
+  }
+
+  &__nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    &__item {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 60px;
+      padding: 0 4px;
+      &:last-child {
+        margin-right: 0;
+      }
+      @include medium {
+        margin-right: 36px;
+      }
+      @include small {
+        display: none;
+        text-align: left;
+        margin-bottom: 48px;
+      }
+    }
+    &__link {
+      text-decoration: none;
+      opacity: 0.7;
+      position: relative;
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: color(black);
+        position: absolute;
+        left: 0;
+        bottom: -46px;
+        transform: scaleX(0%);
+        transition: all 0.3s ease;
+      }
+      &:hover {
+        opacity: 1;
+        &::after {
+          transform: none;
+        }
+      }
+    }
+  }
+
+  &__sosmed {
+    width: 25%;
+    float: right;
+    padding: 0;
+    font-size: 0;
+    list-style: none;
+    margin: 0;
+    text-align: right;
+    @include small {
+      display: block;
+      box-shadow: 1px 1px 6px 2px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      padding: 24px;
+      text-align: center;
+    }
+    &__item {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 40px;
+      text-align: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 20%;
+      transition: all 0.3s ease;
+      @include medium {
+        margin-right: 20px;
+      }
+      @include small {
+        margin-right: 48px;
+        display: none;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        transform: translateY(-1px);
+      }
+    }
+    &__link {
+      text-decoration: none;
+      vertical-align: middle;
+    }
+    &__img {
+      display: inline-block;
+    }
+  }
+}

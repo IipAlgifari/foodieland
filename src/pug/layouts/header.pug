@@ -1,0 +1,75 @@
+//-------------------------------------------------------------------------------
+  @layouts: Footer
+  -------------------------------------------------------------------------------//
+
+//Header
+='\n'
+-
+  othernav = [
+    {
+      txt: 'Home',
+      link: '#home'
+    },
+    {
+      txt: 'Recipes',
+      link: '#resipes'
+    },
+    {
+      txt: 'Blog',
+      link: '#blog'
+    },
+    {
+      txt: 'Contact',
+      link: '#contact'
+    },
+  ]
+
+.header
+  .container
+    .header__wrapper
+      ='\n'
+      //header logo
+      a.header__logo.js-header-logo(href='#home')
+        ='\n'
+        img.header__logo__el(src='assets/img/logo/logo.png' alt='Logo Foodilend')/
+        ='\n'
+
+      //burger-menu
+      button.burger-menu.js-burger-menu(type='button')
+        ='\n'
+        each val in [1, 2, 3]
+          ='\n'
+          span.burger-menu__bar
+          ='\n'
+      ='\n'
+      //header menu
+      .header__menu.js-header-nav
+        ul.header__nav
+          each val, index in othernav
+            li.header__nav__item(class=(index == 0 ? 'header__nav__item--active' : ''))
+              ='\n'
+              a.header__nav__link(href=val.link)
+                | !{val.txt}
+              ='\n'
+      ='\n'
+      //header menu sosial
+      ul.header__sosmed
+        li.header__sosmed__item
+          ='\n'
+          a.header__sosmed__link(href='#')
+            ='\n'
+            img.header__sosmed__img(src="assets/img/icon/fb.png" alt="facebook")/
+            ='\n'
+        li.header__sosmed__item
+          ='\n'
+          a.header__sosmed__link(href='#')
+            ='\n'
+            img.header__sosmed__img(src="assets/img/icon/x.png" alt="x")/
+            ='\n'
+        li.header__sosmed__item
+          ='\n'
+          a.header__sosmed__link(href='#')
+            ='\n'
+            img.header__sosmed__img(src="assets/img/icon/ig.png" alt="instagram")/
+            ='\n'
+

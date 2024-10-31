@@ -1,0 +1,22 @@
+/* ==========================================================================
+   Mixin Display inline blok
+   ========================================================================== */
+
+@mixin inline-block($responsive: false) {
+  display: inline-block;
+  vertical-align: middle;
+
+  // Jika responsive diaktifkan, set display menjadi block pada layar kecil
+  @if $responsive == true {
+    @include medium {
+      // sesuaikan breakpoint sesuai kebutuhan
+      display: block;
+      vertical-align: top;
+    }
+  }
+}
+
+// Penggunaan mixin dengan parameter responsive
+// .element {
+//   @include inline-block-middle(true);
+// }

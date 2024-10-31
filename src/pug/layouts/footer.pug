@@ -1,0 +1,79 @@
+//-------------------------------------------------------------------------------
+  @layouts: Footer
+  -------------------------------------------------------------------------------//
+
+//Footer
+='\n'
+-
+  othernav = {
+    logo: 'assets/img/logo/logo.png',
+    desc: 'Lorem ipsum dolor sit amet, consectetuipisicing elit,',
+    navitem: [
+      {
+        txt: 'Recipes',
+        link: '#recipes'
+      },
+      {
+        txt: 'Blog',
+        link: '#blog'
+      },
+      {
+        txt: 'Contact',
+        link: '#contact'
+      },
+      {
+        txt: 'About Us',
+        link: '#about'
+      },
+    ],
+  }
+
+.footer
+  .container
+    .footer__wrapper
+      .footer__head
+        .footer__logo
+          ='\n'
+          a.footer__logo__link(href='#home')
+            ='\n'
+            img.footer__logo__el(src=(othernav.logo))/
+          ='\n'
+          p.footer__logo__desc
+            | !{othernav.desc}
+        .footer__menu
+          ul.footer__nav
+            each item in othernav.navitem
+              li.footer__nav__item
+                ='\n'
+                a.footer__nav__link(href=item.link) #{item.txt}
+                ='\n'
+      ='\n'
+      .footer__body
+        .footer__sosmed
+          ul.footer__sosmed__list
+            li.footer__sosmed__item
+              ='\n'
+              a.footer__sosmed__link(href='#')
+                ='\n'
+                img.footer__sosmed__img(src="assets/img/icon/fb.png" alt="facebook")/
+                ='\n'
+            li.footer__sosmed__item
+              ='\n'
+              a.footer__sosmed__link(href='#')
+                ='\n'
+                img.footer__sosmed__img(src="assets/img/icon/x.png" alt="x")/
+                ='\n'
+            li.footer__sosmed__item
+              ='\n'
+              a.footer__sosmed__link(href='#')
+                ='\n'
+                img.footer__sosmed__img(src="assets/img/icon/ig.png" alt="instagram")/
+                ='\n'
+          ='\n'
+        .footer__txt
+          p.footer__copyright
+            | © 2020 Flowbase. Powered by
+            span Webflow
+
+
+
