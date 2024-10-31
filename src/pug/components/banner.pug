@@ -7,38 +7,53 @@
     .banner__wrapper
       .banner__txt
         .banner__box
+          ='\n'
           button.btn.btn--bgwhite
-            img.banner__subicon(src=data.subIcon)/
-            | !{data.subtitle}
+            ='\n'
+            img.banner__subicon(src=data.icons.subtitleIcon)/
+            ='\n'
+            | !{data.details.subtitle}
+            ='\n'
           h1.banner__title
-            | !{data.title}
-          p.banner__desc !{data.desc}
+            | !{data.content.title}
+          p.banner__desc !{data.content.desc}
           .banner__btn
+            ='\n'
             a.btn.btn--tertiary
-              | !{data.tmBtn}
+              ='\n'
+              img.btn-icon(src=data.details.time.icon alt='Time')/
+              ='\n'
+              | !{data.details.time.duration}
+            ='\n'
             a.btn.btn--tertiary
-              | !{data.catBtn}
+              ='\n'
+              img.btn-icon(src=data.details.category.icon)/
+              ='\n'
+              | !{data.details.category.name}
         .banner__inner
           .banner__profile
             .banner__profile__img
               ='\n'
-              img.banner__profile__img-el(src=data.avatar)/
+              img.banner__profile__img-el(src=data.author.avatar)/
               ='\n'
             .banner__profile__txt
               h4.banner__profile__title
-                | !{data.name}
+                | !{data.author.name}
               p.banner__profile__date
-                | !{data.date}
+                | !{data.author.date}
           .banner__view
             ='\n'
             a.btn.btn--primary(href='#')
-              | !{data.txtBtn}
+              | !{data.content.buttonText}
+              ='\n'
+              img.btn-icon(src=data.media.playIcon alt='Play vidio')/
+              ='\n'
             ='\n'
       .banner__badge
-        h4.banner__badge__title !{data.badgeTitle}
         ='\n'
-        img.banner__badge__emot(src=data.emotImg, alt=data.title)
+        img.banner__badge__emot(src=data.media.emotIcon, alt='Icon Sip')
       .banner__img
         ='\n'
-        img.banner__img__el(src=data.bgImg)/
+        img.banner__img__el(src=data.media.backgroundImg alt='Bakground Image')/
+        ='\n'
 ='\n\n'
