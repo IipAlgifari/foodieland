@@ -1,10 +1,10 @@
 > jquery-template-web
 
-# jQuery Template Project Website by Bilik Dev
+# FOODIELAND - APP
 
 ### Getting Started
 
-Setup new project with jquery-template-web by bilik dev
+Setup project with jquery-template-web by bilik dev
 
 - enter terminal and clone this repo to local, just run
   ```bash
