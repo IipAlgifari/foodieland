@@ -31,44 +31,27 @@ Layout: Header
     }
   }
 
-  .burger-menu {
-    display: none;
-    float: right;
-    width: 50%;
-    @include small {
-      display: block;
-      height: 48px;
-      width: 48px;
-      background-color: transparent;
-      padding: 8px 0;
-      border: 0;
-      cursor: pointer;
-    }
-    &__bar {
-      width: 100%;
-      height: 3px;
-      background-color: color(black);
-      display: block;
-      margin-bottom: 9px;
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-  }
-
   &__menu {
     width: 50%;
     float: left;
     text-align: center;
     padding: 3px 0;
+    .show-menu & {
+      transform: none;
+    }
     @include small {
-      display: none;
-      position: absolute;
+      position: fixed;
       left: 0;
-      top: 96px;
+      top: 88px;
       width: 100%;
       height: 100%;
       padding: 24px;
+      text-align: left;
+      z-index: 2;
+      background-color: color(primary);
+      transform: scaleX(0%);
+      transform-origin: left center;
+      transition: all 0.5s ease;
     }
   }
 
@@ -89,14 +72,41 @@ Layout: Header
         margin-right: 36px;
       }
       @include small {
-        display: none;
         text-align: left;
         margin-bottom: 48px;
+        display: block;
+        margin-bottom: 40px;
+        position: relative;
+        padding: 0;
+        margin-right: 0;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 2px;
+          background-color: color(black);
+          position: absolute;
+          left: 0;
+          bottom: -16px;
+          transform: scaleX(0%);
+          transition: all 0.4s ease;
+          transform-origin: left center;
+        }
+        &:hover {
+          opacity: 1;
+          &::after {
+            transform: none;
+          }
+        }
       }
     }
+
     &__link {
       text-decoration: none;
-      opacity: 0.7;
+      opacity: 0.9;
       position: relative;
       &::after {
         content: "";
@@ -109,6 +119,9 @@ Layout: Header
         bottom: -46px;
         transform: scaleX(0%);
         transition: all 0.3s ease;
+        @include small {
+          display: none;
+        }
       }
       &:hover {
         opacity: 1;
