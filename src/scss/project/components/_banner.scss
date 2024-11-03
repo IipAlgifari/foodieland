@@ -8,13 +8,13 @@ Components: Banner
   &__wrapper {
     font-size: 0;
     border-radius: 40px;
-    background-color: color(primary);
     overflow: hidden;
   }
   &__txt {
     @include inline-block;
     width: 50%;
     padding: 50px;
+    background-color: color(primary);
   }
   &__box {
     margin-bottom: 98px;
@@ -44,6 +44,10 @@ Components: Banner
     &__img {
       @include inline-block;
       margin-right: 16px;
+      transition: all 0.75s ease 0s;
+      .main-site--hide & {
+        transform: scale(1.1);
+      }
     }
     &__txt {
       @include inline-block;
@@ -69,6 +73,10 @@ Components: Banner
     left: 50%;
     top: 50px;
     transform: translateX(-50%);
+    transition: all 0.75s ease 0.6s;
+    .main-site--hide & {
+      opacity: 0;
+    }
     &__img {
       display: block;
     }
@@ -79,11 +87,16 @@ Components: Banner
       transform: translateX(-50%);
     }
   }
+
   &__img {
     @include inline-block;
     width: 50%;
     height: 654px;
     overflow: hidden;
+    transition: all 0.75s ease 0.6s;
+    .main-site--hide & {
+      opacity: 0;
+    }
     &__el {
       display: block;
       height: 100%;
