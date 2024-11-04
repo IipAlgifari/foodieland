@@ -101,13 +101,13 @@ Components: Banner
     left: 50%;
     top: 50px;
     transform: translateX(-50%);
-    transition: all 0.75s ease 0.6s;
-    .main-site--hide & {
-      opacity: 0;
-    }
     &__img {
       display: block;
       animation: rotate 4s linear infinite;
+      transition: all 0.95s ease 0.6s;
+      .main-site--hide & {
+        opacity: 0;
+      }
       @keyframes rotate {
         from {
           transfrom: rotate(0deg);
