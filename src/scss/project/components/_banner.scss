@@ -7,13 +7,14 @@ Components: Banner
   }
 
   &__wrapper {
-    font-size: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 40px;
     overflow: hidden;
   }
 
   &__txt {
-    @include inline-block;
     width: 50%;
     padding: 50px;
     background-color: color(primary);
@@ -23,7 +24,7 @@ Components: Banner
   }
 
   &__box {
-    margin-bottom: 98px;
+    margin-bottom: 62px;
     @include large {
       margin-bottom: 54px;
     }
@@ -58,6 +59,7 @@ Components: Banner
     @include inline-block;
     width: 50%;
     text-align: left;
+
     &__img {
       @include inline-block;
       margin-right: 16px;
@@ -90,6 +92,10 @@ Components: Banner
     text-align: right;
   }
 
+  .btn-icon {
+    margin-left: 4px;
+  }
+
   &__badge {
     position: absolute;
     left: 50%;
@@ -101,6 +107,15 @@ Components: Banner
     }
     &__img {
       display: block;
+      animation: rotate 4s linear infinite;
+      @keyframes rotate {
+        from {
+          transfrom: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
     }
     &__emot {
       position: absolute;
@@ -111,19 +126,15 @@ Components: Banner
   }
 
   &__img {
-    @include inline-block;
     width: 50%;
-    height: 654px;
     overflow: hidden;
     transition: all 0.75s ease 0.6s;
+    background-color: grey;
     .main-site--hide & {
       opacity: 0;
     }
 
     &__el {
-      display: block;
-      height: 100%;
-      width: 100%;
       object-fit: cover;
     }
   }
