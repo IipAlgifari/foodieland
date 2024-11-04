@@ -39,7 +39,8 @@ Layout: Header
     .show-menu & {
       transform: none;
     }
-    @include small {
+
+    @include medium {
       position: fixed;
       left: 0;
       top: 88px;

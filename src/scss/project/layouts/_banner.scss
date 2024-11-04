@@ -5,4 +5,8 @@ Layout: Banner
 .banner {
   padding-top: 60px;
   padding-bottom: 80px;
+  @include large {
+    padding-top: 48px;
+    padding-bottom: 64px;
+  }
 }
