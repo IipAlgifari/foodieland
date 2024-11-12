@@ -1,0 +1,94 @@
+// .main-programs {
+//   $m: &;
+//   background-color: color(primary);
+//   color: color(white);
+//   padding: 64px 0;
+//   &__wrapper {
+//     padding: 64px 0;
+//   }
+//   &__title {
+//     @include font-size(48);
+//     margin-bottom: 44px;
+//   }
+//   &__card {
+//     display: flex;
+//     justify-content: flex-start;
+//     align-items: center;
+//     gap: 20px;
+//   }
+//   &__item {
+//     padding: 20px;
+//     display: grid;
+//     place-content: center;
+//     width: 200px;
+//     height: 497px;
+//     background-position: center;
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     overflow: hidden;
+//     position: relative;
+//     transition: 500ms ease-in-out width, 500ms ease-in-out filter;
+//     &::before {
+//       content: "";
+//       position: absolute;
+//       inset: 0;
+//       background: linear-gradient(
+//         180deg,
+//         rgba(0, 0, 0, 0.1) 0%,
+//         rgba(0, 0, 0, 0.648641) 60.96%,
+//         #000000 100%
+//       );
+//       transition: all 500ms ease-in-out;
+//     }
+//     &:hover {
+//       width: 360px;
+//       &::before {
+//         background: rgba(0, 0, 0, 0.4);
+//       }
+//       .main-programs__content {
+//         transform: none;
+//       }
+//       .main-programs__desc {
+//         height: 100%;
+//       }
+//     }
+//     &:nth-child(1) {
+//       background-image: url(../img/dummy/talk-show.jpg);
+//     }
+//     &:nth-child(2) {
+//       background-image: url(../img/dummy/workshop.jpg);
+//     }
+//     &:nth-child(3) {
+//       background-image: url(../img/dummy/business-expo.jpg);
+//     }
+//     &:nth-child(4) {
+//       background-image: url(../img/dummy/converence.jpg);
+//     }
+//     &:nth-child(5) {
+//       background-image: url(../img/dummy/entertainment.jpg);
+//     }
+//     &:nth-child(6) {
+//       background-image: url(../img/dummy/networking.jpg);
+//     }
+//   }
+//   &__content {
+//     transform: rotate(-90deg);
+//     transform: 500ms ease-in-out transform;
+//     padding: 20px;
+//   }
+//   &__subtitle {
+//     @include font-size(32);
+//     margin-bottom: 0;
+//     text-align: left;
+//     transition: all 500ms ease-in-out;
+//   }
+//   &__desc {
+//     @include font-size(14);
+//     margin-bottom: 0;
+
+//     // - default desc
+//     height: 0;
+//     overflow: hidden;
+//     transition: all 500ms ease-in-out;
+//   }
+// }

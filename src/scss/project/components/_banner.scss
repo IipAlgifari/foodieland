@@ -28,10 +28,19 @@ Components: Banner
     @include large {
       margin-bottom: 54px;
     }
+    &__img {
+      width: 156px;
+      height: 45px;
+      overflow: hidden;
+    }
   }
 
-  .btn--bgwhite {
-    margin-bottom: 32px;
+  &__subicon {
+    .owl-carousel .owl-img {
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+    }
   }
 
   &__title {
@@ -130,12 +139,9 @@ Components: Banner
     overflow: hidden;
     transition: all 0.75s ease 0.6s;
     background-color: grey;
-    .main-site--hide & {
-      opacity: 0;
-    }
-
     &__el {
       object-fit: cover;
+      height: 100%;
     }
   }
 }

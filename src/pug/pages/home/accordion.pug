@@ -1,0 +1,56 @@
+
+//-------------------------------------------------------------------------------
+//-  @name: Main -programs
+//- ---------------------------------------------------------------------------
+
+//  Main-programs
+
+-
+ data = {
+    title: 'Main Programs',
+    programs: [
+      {
+        img: 'assets/img/dummy/talk-show.jpg',
+        title: 'Talk Show',
+        description: 'In a vibrant city, laughter echoed as friends gathered to share stories, creating unforgettable memories filled with joy and excitement. In a vibrant city, laughter echoed as friends gathered to share stories, creating unforgettable memories filled with joy and excitement.'
+      },
+      {
+        img: 'assets/img/dummy/workshop.jpg',
+        title: 'Workshop',
+        description: 'In a vibrant city, laughter echoed as friends gathered to share stories, creating unforgettable memories filled with joy and excitement. In a vibrant city, laughter echoed as friends gathered to share stories, creating unforgettable memories filled with joy and excitement.'
+      },
+      {
+        img: 'assets/img/dummy/business-expo.jpg',
+        title: 'Business Expo',
+        description: 'In a vibrant city, laughter echoed as friends gathered to share stories, creating unforgettable memories filled with joy and excitement. In a vibrant city, laughter echoed as friends gathered to share stories, creating unforgettable memories filled with joy and excitement.'
+      },
+      {
+        img: 'assets/img/dummy/converence.jpg',
+        title: 'Converence',
+        description: 'In a vibrant city, laughter echoed as friends gathered to share stories, creating unforgettable memories filled with joy and excitement. In a vibrant city, laughter echoed as friends gathered to share stories, creating unforgettable memories filled with joy and excitement.'
+      },
+      {
+        img: 'assets/img/dummy/entertainment.jpg',
+        title: 'Entertainment',
+        description: 'In a vibrant city, laughter echoed as friends gathered to share stories, creating unforgettable memories filled with joy and excitement. In a vibrant city, laughter echoed as friends gathered to share stories, creating unforgettable memories filled with joy and excitement.'
+      },
+      {
+        img: 'assets/img/dummy/networking.jpg',
+        title: 'Networking',
+        description: 'In a vibrant city, laughter echoed as friends gathered to share stories, creating unforgettable memories filled with joy and excitement. In a vibrant city, laughter echoed as friends gathered to share stories, creating unforgettable memories filled with joy and excitement.'
+      },
+    ]
+  }
+
+
+
+.main-programs
+  .container
+    .main-programs__wrapper
+      h2.main-programs__title= data.title
+      .main-programs__card
+        each val, index in data.programs
+          .main-programs__item(class=index === 0 ? 'active' : '')
+            .main-programs__content
+              h4.main-programs__subtitle= val.title
+              p.main-programs__desc= val.description

@@ -12,7 +12,7 @@ const Reveal = (() => {
     origin = "bottom"
   ) => {
     const _config = {
-      duration: 900,
+      duration: 1000,
       distance: distance,
       delay: delay,
       interval: interval,
@@ -46,22 +46,6 @@ const Reveal = (() => {
 
     // -- responsive config
     if ($(window).width() <= 767.98) {
-      ScrollReveal().reveal(
-        ".portofolio__list",
-        handleRevealConfig(50, "24px", 50, "bottom")
-      );
-      ScrollReveal().reveal(
-        ".expertise__list",
-        handleRevealConfig(50, "24px", 50, "bottom")
-      );
-      ScrollReveal().reveal(
-        ".contact-us__img",
-        handleRevealConfig(55, "24px", 50, "bottom")
-      );
-      ScrollReveal().reveal(
-        ".contact-us__form",
-        handleRevealConfig(55, "24px", 50, "bottom")
-      );
     }
   };
 

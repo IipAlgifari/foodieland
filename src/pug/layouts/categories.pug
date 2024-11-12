@@ -1,0 +1,19 @@
+//-------------------------------------------------------------------------------
+  @name: Categories
+  -------------------------------------------------------------------------------//
+
+.categories
+  .container
+    .categories__wrapp
+      .categories__txt
+        h2.categories__title Categories
+        .categories__btn
+          button.btn View All Categories
+      .categories__list
+        each val in data
+          .categories__item
+            .categories__img
+              ='\n'
+              img.categories__img__el(src=val.img alt=val.name)/
+              ='\n'
+            4.categories__name= val.name

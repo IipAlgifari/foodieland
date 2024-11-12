@@ -17,19 +17,6 @@
           h1.banner__title
             | !{data.content.title}
           p.banner__desc !{data.content.desc}
-          .banner__btn
-            ='\n'
-            a.btn.btn--tertiary
-              ='\n'
-              img.btn-icon(src=data.details.time.icon alt='Time')/
-              ='\n'
-              | !{data.details.time.duration}
-            ='\n'
-            a.btn.btn--tertiary
-              ='\n'
-              img.btn-icon(src=data.details.category.icon)/
-              ='\n'
-              | !{data.details.category.name}
         .banner__inner
           .banner__profile
             .banner__profile__img
@@ -41,6 +28,11 @@
                 | !{data.author.name}
               p.banner__profile__date
                 | !{data.author.date}
+            .banner__profile__btn
+              .banner__profile__btn__minutes
+                span= data.details.duration
+              .banner__profile__btn__knife
+                span Chicken
           .banner__view
             ='\n'
             a.btn.btn--primary(href='#')
